@@ -1,14 +1,16 @@
 # autoscale-terraform-template
 
-## generate key_pair
+
+## getting started
+### generate key_pair
 
 ```bash
 ssh-keygen -t rsa -N "" -f key_pair
 ```
 
 
-## use cross account access
-
+### use cross account access
+if dont use ,skip this.
 provider_override.tf
 
 ```hcl
