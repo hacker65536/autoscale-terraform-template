@@ -24,3 +24,9 @@ provider "aws" {
   }
 }
 ```
+
+### plan
+
+```bash
+terraform env new my-env
+```
