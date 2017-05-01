@@ -31,12 +31,6 @@
 #  tags   = "${merge(var.tags,map("Name",format("%s-%s",terraform.env,"natpubrtb")),map("Env",terraform.env))}"
 #}
 #
-#resource "aws_route_table_association" "pub" {
-#  count          = 4
-#  subnet_id      = "${element(aws_subnet.subnet.*.id,count.index)}"
-#  route_table_id = "${aws_route_table.igwrtb.id}"
-#}
-#
 #resource "aws_route_table_association" "nat_pub" {
 #  count          = 2
 #  subnet_id      = "${element(aws_subnet.nat.*.id,count.index)}"

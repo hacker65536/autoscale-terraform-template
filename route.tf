@@ -14,3 +14,9 @@ resource "aws_route" "igw" {
   destination_cidr_block = "0.0.0.0/0"
   gateway_id             = "${aws_internet_gateway.igw.id}"
 }
+
+resource "aws_route_table_association" "pub" {
+  count          = 4
+  subnet_id      = "${element(aws_subnet.subnet.*.id,count.index)}"
+  route_table_id = "${aws_route_table.igwrtb.id}"
+}
