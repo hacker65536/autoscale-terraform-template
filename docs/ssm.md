@@ -77,3 +77,5 @@ aws ssm send-command --document-name "AWS-RunShellScript" \
     }
 }
 ```
+
+![ssm_runcommand](./ssm_runcommand.png)
