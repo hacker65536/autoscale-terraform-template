@@ -13,3 +13,6 @@ yum install -y https://amazon-ssm-$region.s3.amazonaws.com/latest/linux_amd64/am
 
 #---snip---
 ```
+
+externalの接続が必要なので、instanceが外にアクセスできるようにigwのrouteにsubnetをassociateしている必要がある。  
+internalの場合はs3に置きvpc-endpointなどでつなげることも可能のはず。
