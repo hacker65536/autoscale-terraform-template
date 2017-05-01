@@ -1,5 +1,5 @@
 
-user_dataに`ssm-agent`をインストールする処理を入れる
+`user_data`に`ssm-agent`をインストールする処理を入れる
 
 ```bash
 #---snip---
