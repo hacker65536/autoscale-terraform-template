@@ -16,3 +16,5 @@ yum install -y https://amazon-ssm-$region.s3.amazonaws.com/latest/linux_amd64/am
 
 externalの接続が必要なので、instanceが外にアクセスできるようにigwを持つroute tableにsubnetをassociateしている必要がある。  
 internalの場合はs3に置きvpc-endpointなどでつなげることも可能のはず。
+
+setup inventory(create-association)はterraform(0.9.3)ではまだtargetの指定ができなくautoscaling groupでの適応が難しい。こちらはマネジメントコンソールから手動で行う必要がある。
