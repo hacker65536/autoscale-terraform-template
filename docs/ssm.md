@@ -22,7 +22,7 @@ setup inventory(create-association)はterraform(0.9.3)ではまだtargetの指�
 
 ## setup inventory
 ### Managed Instances -> Setup Inventory
-![setup inventory](./setupinventory.PNG)
+![setup inventory](./setupinventory.png)
 
 ### Manged Instances -> Select Instance -> Inventory tab -> Inventory Type -> AWS:Application
-![ssm inventory](./ssm_inventory.PNG)
+![ssm inventory](./ssm_inventory.png)
