@@ -26,3 +26,10 @@ setup inventory(create-association)はterraform(0.9.3)ではまだtargetの指�
 
  Manged Instances -> Select Instance -> Inventory tab -> Inventory Type -> AWS:Application
 ![ssm inventory](./ssm_inventory.png)
+
+
+
+## Run Command
+
+```bash
+aws ssm send-command --document-name "AWS-RunShellScript" --parameters commands=['echo helloWorld'] --targets "Key=tag:aws:autoscaling:groupName,Values=my-env-test-asg-008666db744cb8c5b52fa45377"
