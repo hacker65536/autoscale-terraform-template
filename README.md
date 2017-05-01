@@ -39,3 +39,16 @@ $ terraform env list
 * my-env-test
   new-env
 ```
+
+
+### add rule to security group
+
+security_group.tf
+```hcl
+variable "sec" {
+  default = [
+   "222.222.222.222/32",
+   "111.111.111.111/32",
+  ]
+}
+```
