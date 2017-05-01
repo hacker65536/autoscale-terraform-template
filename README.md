@@ -25,8 +25,17 @@ provider "aws" {
 }
 ```
 
-### plan
+### create env
+
 
 ```bash
 terraform env new my-env
+```
+
+```bash
+$ terraform env list
+
+  default
+* my-env-test
+  new-env
 ```

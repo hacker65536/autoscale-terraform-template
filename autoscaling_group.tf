@@ -12,7 +12,7 @@ variable "group_metrics_collection" {
 }
 
 variable "as_max" {
-  default = 5
+  default = 10
 }
 
 variable "as_min" {
@@ -20,7 +20,7 @@ variable "as_min" {
 }
 
 variable "as_desired" {
-  default = 2
+  default = 5
 }
 
 variable "termination_policies" {
