@@ -18,3 +18,8 @@ externalの接続が必要なので、instanceが外にアクセスできるよ�
 internalの場合はs3に置きvpc-endpointなどでつなげることも可能のはず。
 
 setup inventory(create-association)はterraform(0.9.3)ではまだtargetの指定ができなくautoscaling groupでの適応が難しい。こちらはマネジメントコンソールから手動で行う必要がある。
+
+![setup inventory](./setupinventory.PNG)
+
+
+![ssm inventory](./ssm_inventory.PNG)
