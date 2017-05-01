@@ -19,7 +19,10 @@ internalの場合はs3に置きvpc-endpointなどでつなげることも可能�
 
 setup inventory(create-association)はterraform(0.9.3)ではまだtargetの指定ができなくautoscaling groupでの適応が難しい。こちらはマネジメントコンソールから手動で行う必要がある。
 
+
+## setup inventory
+Managed Instances -> Setup Inventory
 ![setup inventory](./setupinventory.PNG)
 
-
+Manged Instances -> Select Instance -> Inventory tab -> Inventory Type -> AWS:Application
 ![ssm inventory](./ssm_inventory.PNG)
