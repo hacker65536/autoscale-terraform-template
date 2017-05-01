@@ -32,4 +32,48 @@ setup inventory(create-association)はterraform(0.9.3)ではまだtargetの指�
 ## Run Command
 
 ```bash
-aws ssm send-command --document-name "AWS-RunShellScript" --parameters commands=['echo helloWorld'] --targets "Key=tag:aws:autoscaling:groupName,Values=my-env-test-asg-008666db744cb8c5b52fa45377"
+aws ssm send-command --document-name "AWS-RunShellScript" \
+--parameters commands=['echo helloWorld'] \
+--targets "Key=tag:aws:autoscaling:groupName,Values=my-env-test-asg-008666db744cb8c5b52fa45377"
+```
+
+```json
+{
+    "Command": {
+        "Comment": "",
+        "Status": "Pending",
+        "MaxErrors": "0",
+        "Parameters": {
+            "commands": [
+                "echo helloWorld"
+            ]
+        },
+        "ExpiresAfter": 1493618688.499,
+        "ServiceRole": "",
+        "DocumentName": "AWS-RunShellScript",
+        "TargetCount": 0,
+        "OutputS3BucketName": "",
+        "NotificationConfig": {
+            "NotificationArn": "",
+            "NotificationEvents": [],
+            "NotificationType": ""
+        },
+        "CompletedCount": 0,
+        "Targets": [
+            {
+                "Values": [
+                    "my-env-test-asg-008666db744cb8c5b52fa45377"
+                ],
+                "Key": "tag:aws:autoscaling:groupName"
+            }
+        ],
+        "StatusDetails": "Pending",
+        "ErrorCount": 0,
+        "OutputS3KeyPrefix": "",
+        "RequestedDateTime": 1493611488.499,
+        "CommandId": "2688a2d5-cbc7-40da-a1f7-37e045036195",
+        "InstanceIds": [],
+        "MaxConcurrency": "50"
+    }
+}
+```
