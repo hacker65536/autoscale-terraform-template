@@ -11,16 +11,12 @@ variable "group_metrics_collection" {
   ]
 }
 
-variable "as_max" {
-  default = 10
-}
-
-variable "as_min" {
-  default = 2
-}
-
-variable "as_desired" {
-  default = 5
+variable "as_param" {
+  default = {
+    max     = 10
+    min     = 2
+    desired = 2
+  }
 }
 
 variable "termination_policies" {
@@ -41,9 +37,9 @@ resource "aws_placement_group" "pg" {
 
 resource "aws_autoscaling_group" "asg" {
   name_prefix          = "${terraform.env}-asg-"
-  max_size             = "${var.as_max}"
-  desired_capacity     = "${var.as_desired}"
-  min_size             = "${var.as_min}"
+  max_size             = "${lookup(var.as_param,"max")}"
+  min_size             = "${lookup(var.as_param,"min")}"
+  desired_capacity     = "${lookup(var.as_param,"desired")}"
   launch_configuration = "${aws_launch_configuration.launch_conf.name}"
   vpc_zone_identifier  = ["${list(aws_subnet.subnet.0.id,aws_subnet.subnet.1.id)}"]
   enabled_metrics      = ["${var.group_metrics_collection}"]
